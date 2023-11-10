@@ -24,6 +24,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptor
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.tasks.CancellationToken
@@ -194,6 +195,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         val city = LatLng(latitude, longitude)
         mMap.moveCamera(CameraUpdateFactory.newLatLng(city))
         mMap.uiSettings.isZoomControlsEnabled = true
+        mMap.setMinZoomPreference(9.3f)
     }
 }
 
